@@ -43,7 +43,7 @@ $(document).ready(function() {
   $("#tvurci_link").attr('href',"#tvurci");
   $("#sponzori_link").attr('href',"#sponzori");
   $("#spoty_link").attr('href',"#spoty");
-  $("#facebook_link").attr('href',"#facebook");
+  $("#aktuality_link").attr('href',"#aktuality");
 
 });
 
