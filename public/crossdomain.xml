@@ -1,4 +1,5 @@
 <cross-domain-policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.adobe.com/xml/schemas/PolicyFile.xsd">
   <allow-access-from domain="*.filmbastardi.cz" />
 	<allow-access-from domain="facebook.com" />
+	<allow-access-from domain="youtube.com" />
 </cross-domain-policy>
