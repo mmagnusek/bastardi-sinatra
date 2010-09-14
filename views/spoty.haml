@@ -1,0 +1,36 @@
+:javascript
+  $(document).ready(function() {
+    $("#spoty img").mouseenter(function (){
+      $(this).css('z-index', '1000');
+      $(this).animate({ 
+          width: "150px",
+          left: "-=25",
+          marginTop: "0px"
+        }, 100);
+    }).mouseleave(function (){
+      $(this).css('z-index', '100');
+      $(this).animate({ 
+          width: "95px",
+          left: "+=25",
+          marginTop: "15"
+        }, 100);
+    }).click(function (){
+      $("#spot-preview .youtube-player").attr('src',$(this).attr('youtube'));
+    }) 
+  });
+#spot-container
+  #spot-preview
+    %iframe.youtube-player{:type => "text/html", :width => "487", :height => "299", :src => "", :frameborder => "0"}
+
+  #spoty
+    %img{:style => "left: 25px", :src => "facebook/spot-hajicek-open.png", :alt => "Tomáš Hajíček - náhled spotu", :youtube => "http://www.youtube.com/embed/71XTbn8pbt4"}
+    %img{:style => "left: 125px", :src => "facebook/spot-leichtova-open.png", :alt => "Kristýna Leichtová - náhled spotu", :youtube => "http://www.youtube.com/embed/kR6i-rywYPc"}
+    %img{:style => "left: 225px", :src => "facebook/spot-stastny-open.png", :alt => "Jan Šťastný - náhled spotu", :youtube => "http://www.youtube.com/embed/n505kNBzQTo"}
+    %img{:style => "left: 125px", :src => "facebook/spot-leichtova.png", :alt => "Kristýna Leichtová - náhled spotu"}
+    %img{:style => "left: 225px", :src => "facebook/spot-stastny.png", :alt => "Jan Šťastný - náhled spotu"}
+    %img{:style => "left: 325px", :src => "facebook/spot-sulcova.png", :alt => "Jana Šulcová - náhled spotu"}
+    %img{:style => "left: 425px", :src => "facebook/spot-dolansky.png", :alt => "David Dolanský - náhled spotu"}
+    %img{:style => "left: 525px", :src => "facebook/spot-rytmus.png", :alt => "Patrik 'Rytmus' Vrbovský - náhled spotu"}
+    %img{:style => "left: 625px", :src => "facebook/spot-bukova.png", :alt => "Ivana Buková - náhled spotu"}
+    %img{:style => "left: 725px", :src => "facebook/spot-potmesil.png", :alt => "Ladislav Potměšil - náhled spotu"}
+    %img{:style => "left: 825px", :src => "facebook/spot-magnusek.png", :alt => "Tomáš Magnusek - náhled spotu"}

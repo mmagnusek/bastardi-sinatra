@@ -1,0 +1,167 @@
+:javascript
+  $(document).ready(function() {
+    $("#actorList li a").hover(function(){
+      $(this).addClass("hover");
+    },function(){
+      $(this).removeClass("hover");
+    }).click(function(){
+      $("#actorList li a").removeClass("active");
+      $(this).addClass("active");
+    });
+  });
+  function changeActor(jmeno){
+    $(".slideshow").hide();
+    if($(".actorPhoto").is(':visible')){
+      $(".actorPhoto").fadeOut(100,function(){
+        showActor(jmeno);
+      });
+    }else{
+      showActor(jmeno);
+    }
+  }
+  function showActor(jmeno){
+    $("#actorDetail tr td").html($("#" + jmeno).html());
+    $(".actorPhoto").css("background-image", "url('herci/" + jmeno + ".JPG')");
+    $(".actorPhoto").fadeIn(100);
+  }
+
+#actorList
+  %ul
+    %li
+      %a{:href => "javascript:changeActor('Magnusek');"} Tomáš Magnusek
+    %li
+      %a{:href => "javascript:changeActor('Bukova');"} Ivana Buková
+    %li
+      %a{:href => "javascript:changeActor('Potmesil');"} Ladislav Potměšil
+    %li
+      %a{:href => "javascript:changeActor('Sulcova');"} Jana Šulcová
+    %li
+      %a{:href => "javascript:changeActor('Dolansky');"} David Dolanský
+    %li
+      %a{:href => "javascript:changeActor('Koutny');"} Patrik Koutný
+    %li
+      %a{:href => "javascript:changeActor('Leichtova');"} Kristýna Leichtová
+    %li
+      %a{:href => "javascript:changeActor('Semerak');"} Ondřej Semerák
+    %li
+      %a{:href => "javascript:changeActor('Cizkovska');"} Eva Čížkovská
+    %li
+      %a{:href => "javascript:changeActor('Hajicek');"} Tomáš Hájíček
+    %li
+      %a{:href => "javascript:changeActor('Preucil');"} Jan Přeučil
+    %li
+      %a{:href => "javascript:changeActor('Poloczek');"} Bronislav Poloczek
+    %li
+      %a{:href => "javascript:changeActor('Stastny');"} Jan Šťastný
+    %li.smaller
+      %a{:href => "javascript:changeActor('Rytmus');"} Patrik "Rytmus" Vrbovský
+    %li
+      %a{:href => "javascript:changeActor('Obermaierova');"} Jaroslava Obermaierová
+    %li
+      %a{:href => "javascript:changeActor('Hanusova');"} Jaroslava Hanušová
+    %li
+      %a{:href => "javascript:changeActor('Hemala');"} Alexandr Hemala
+    %li
+      %a{:href => "javascript:changeActor('Holub');"} Radek Holub
+    %li
+      %a{:href => "javascript:changeActor('Cimicky');"} Jan Cimický
+    %li
+      %a{:href => "javascript:changeActor('Rasilov');"} Saša Rašilov
+    %li
+      %a{:href => "javascript:changeActor('Deti');"} děti
+    %li
+      %a{:href => "javascript:changeActor('Bohdanova');"} Blanka Bohdanová
+
+%table#actorDetail
+  %tr
+    %td{:valign => "bottom"}
+
+.data{:style => "display: none;"}
+  #Magnusek
+    %h2 Tomáš Magnusek
+    %p Objevil se jako osmnáctiletý ve video-amatérském seriálu Parťáci s.r.o. z roku 2002. O sedm let později si zahrál hlavní roli ve snímku Pamětnice společně s Libuší Švormovou.
+  
+  #Bukova
+    %h2 Ivana Buková
+    %p Sympatická herečka zatím bohuže jen epizodních seriálových rolí se do role zástupkyně Fišerové vžila vynikajícím způsobem a předvedla zde svůj zatím ne zcela využitý herecký um.
+  
+  #Potmesil
+    %h2 Ladislav Potměšil
+    %p Příští rok oslaví tento herec padesát let od jeho první filmové role. Populárního českého herce známe především ze snímků Discopříběh a Discopříběh II. a z trilogie Byl jednou jeden polda.
+  
+  #Sulcova
+    %h2 Jana Šulcová
+    %p Významná dáma českého herectví se vrací na televizní obrazovky a především na filmové plátno. Jen v posledních dvou letech natočila tři celovečerní snímky.
+  
+  #Dolansky
+    %h2 David Dolanský
+    %p Mladý neherec, který spolupracuje s T.Magnuskem od roku 2004 stál před filmovou kamerou poprvé v životě. Již dnes má ovšem nejen další nabídky ve filmové, ale také v divadelní branži.
+  
+  #Koutny
+    %h2 Patrik Koutný
+    %p Žák T.Magnuska ze základní školy v Broumově zkoušel postavu jednoho z tria gaunerů ve snímku Bastardi společně se svým učitelem více jak rok. Jeho výkon překvapil všechny zúčastněné.
+  
+  #Leichtova
+    %h2 Kristýna Leichtová
+    %p Letos pětadvacetiletá sympatická herečka na sebe nejvíce upozornila ve snímku Účastníci zájezdu jako Denisa. Věnuje se i televizní tvorbě (Comeback, Sokromé pasti).
+  
+  #Semerak
+    %h2 Ondřej Semerák
+    %p Další z žáků T.Magnuska nastoupil do rozjetého vlaku přípravných prací na Bastardech na poslední chvíli a přesto, že i pro něho to byla první filmová příležitost, zhostil se jí dobře.
+  
+  #Cizkovska
+    %h2 Eva Čížkovská
+    %p Sympatická česká herečka, která vystudovala DAMU obor herectví je součástí české televizní a filmové tvorby již od roku 1988. Hrála například v oblíbených českých seriálech (Hospoda, Ordinace v Růžové zahradě).
+  
+  #Hajicek
+    %h2 Tomáš Hájíček
+    %p Nepochybně jeden z nejosobitějších českých porevolučních hudebníků stál před filmovou kamerou v takto výrazné roli zcela prvně. Nicméně, frontman skupiny Krucipüsk hraje také v muzikálech a skládá filmovou hudbu.
+  
+  #Preucil
+    %h2 Jan Přeučil
+    %p Výrazná osobnost českého herectví Jan Přeučil povýšil svým hereckým uměním zcela okrajovou postavu školníka na jednu z klíčových postav snímku. Osobitý český herec točí již od roku 1958.
+  
+  #Poloczek
+    %h2 Bronislav Poloczek
+    %p Oblíbený český herec si ve snímku Bastardi hraje vynikajícím způsobem policejního vyšetřovatele, jež ví, že není zcela jednoduché zlo potrestat. Herec se věnuje nejen filmové, ale i televizní a divadelní tvorbě.
+  
+  #Stastny
+    %h2 Jan Šťastný
+    %p Ať se tomu nedá věřit, v současnosti jeden z nejoblíbenějších českých herců se poprvé postavil před českou filmovou kameru právě ve snímku Bastardi. Pan Šťastný je především výrazným televizním a dabingovým hercem.
+  
+  #Rytmus
+    %h2{:class => "jmeno smaller"} Patrik "Rytmus" Vrbovský
+    %p Jedna z nejvýraznějších hudebních slovenských osobností Rytmus je současně i autorem hudebních skladeb, které ve snímku uslyšíte.
+  
+  #Obermaierova
+    %h2 Jaroslava Obermaierová
+    %p Oblíbená česká divadelní, televizní a samozřejmě i filmová herečka hraje ve snímku Bastardi jednu z uklízeček, které po celou dobu snímku velmi vtipně a trefně komentují události ve škole.
+  
+  #Hanusova
+    %h2 Jaroslava Hanušová
+    %p Jedna z tahounů pořadu Možná příjde i kouzelník vytvořila společně s J. Obermaierovou nepochybně velmi komediální a doplňující se dvojici provozních pracovnic na škole, kde se dějí nepravosti.
+  
+  #Hemala
+    %h2 Alexandr Hemala
+    %p Populární český televizní hlasatel a moderátor ve snímku hraje inspektora z ministerstva školství. Jeho smysl pro humor a velmi přirozený herecký projev snímku jistě prospěl.
+  
+  #Holub
+    %h2 Radek Holub
+    %p Výrazná herecká osobnost, která hrála v celé řadě úspěšných českých snímků - Šakalí léta, Kráva, Karamazovi či Učitel tance. S podobnou filmovou látkou se setkal již v příběhu Marián.
+  
+  #Cimicky
+    %h2 Jan Cimický
+    %p Významný český psychiatr a spisovatel byl jedním z prvních, kdo scénář ke snímku Bastardi četl a rozhodl se jej svoji přítomností podpořit.
+  
+  #Rasilov
+    %h2 Saša Rašilov
+    %p Oblíbený český herec střední generace vytvořil postavu tělocvikáře. S filmem a televizní prací má Saša Rašilov bohaté zkušenosti. Mimo to hraje například v Národním divadle.
+  
+  #Deti
+    %h2 V dětských rolích se objevili: (ne všichni jsou na této fotografii)
+    %p Šárka Bartošová, Július Bartoš, Šárka Dančová, Petra Malá, Vojtěch Majer, Lída Nehybová, Kristýna Kosařová, Erik Karvai, Nikola Lichnovská, Marián Čuri,Jan Šmatár
+  
+  #Bohdanova
+    %h2 Blanka Bohdanová
+    %p Skutečná legenda české kinematografie natáčela film v době, kdy dopisovala svoji knihu a především zkoušela náročnou divadelní hru se Stanislavem Zindulkou. Přesto se projektu zúčastnila a my ji za to děkujeme.
+  

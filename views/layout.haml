@@ -1,0 +1,72 @@
+!!! Strict
+%html{:xmlns =>"http://www.w3.org/1999/xhtml", :"xml:lang" => "cs", :lang => "cs"}
+  %head
+    %title= title
+    %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=UTF-8"}
+    %meta{:name => "description", :content => description }
+    %meta{:name => "author", :content => "Martin Magnusek"}
+    %link{:href => "styles/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
+
+    <!--[if IE]>
+    %link{:rel => "stylesheet", :type => "text/css", :href => "ie.css"}
+    <![endif]--> 
+    <!--[if IE 6]>
+    %link{:rel => "stylesheet", :type => "text/css", :href => "ie6.css"}
+    <![endif]--> 
+    <!--[if IE 7]>
+    %link{:rel => "stylesheet", :type => "text/css", :href => "ie7.css"}
+    <![endif]-->
+
+    %script{:type => "text/javascript", :src => "javascripts/jquery-1.4.2.min.js"}
+    %script{:type => "text/javascript", :src => "javascripts/jquery.cycle.min.js"}
+    %script{:type => "text/javascript", :src => "javascripts/flowplayer-3.2.3.min.js"}
+    %script{:type => "text/javascript", :src => "javascripts/jquery.lavalamp.js"}
+    %script{:type => "text/javascript", :src => "javascripts/jquery.easing.min.js"}
+    %script{:type => "text/javascript", :src => "javascripts/application.js"}
+
+  %body
+    #content
+      .actorPhoto
+      .slideshow
+        %img{:src=> "background/Still0519_00046.jpg", :width => "1200", :height => "675", :alt => "Pozadí - Bastardi"}
+        %img{:src=> "background/Still0519_00001.jpg", :width => "1200", :height => "675", :alt => "Pozadí - Ladislav Potměšil"}
+        %img{:src=> "background/Still0519_00005.jpg", :width => "1200", :height => "675", :alt => "Pozadí - Eva Čížkovská"}
+        %img{:src=> "background/Still0519_00024.jpg", :width => "1200", :height => "675", :alt => "Pozadí - David Dolanský"}
+        %img{:src=> "background/Still0519_00028.jpg", :width => "1200", :height => "675", :alt => "Pozadí - Tomáš Magnusek"}
+        %img{:src=> "background/Still0519_00033.jpg", :width => "1200", :height => "675", :alt => "Pozadí - Kristýna Leichtová"}
+        %img{:src=> "background/Still0519_00064.jpg", :width => "1200", :height => "675", :alt => "Pozadí - Pohřeb"}
+
+      #content-filter
+        #content-box
+          #content-background
+            %img#close_button{:src => "images/fancy_close.png", :onclick => "javascript:removeContent();", :alt => "Zavřít obsah"}
+            #content-text= yield
+
+        #menu
+          %ul.lavaLamp
+            %li
+              %a#aktuality_link{:href => "aktuality.html"} Aktuality
+            %li
+              %a#o_filmu_link{:href => "o_filmu.html"} O filmu
+            %li              
+              %a#herci_link{:href => "herci.html"} Herci
+            %li
+              %a#spoty_link{:href => "spoty.html"} Spoty
+            %li
+              %a#z_nataceni_link{:href => "z_nataceni.html"} Z natáční
+            %li
+              %a#tvurci_link{:href => "tvurci.html"} Tvůrci filmu
+            %li
+              %a#sponzori_link{:href => "sponzori.html"} Sponzoři
+          #music
+            %a#play_button{:href => "javascript:playMusic();"}
+            %a#stop_button{:href => "javascript:stopMusic();"}
+          #trailer
+            %a{:href => "index.html"} TRAILER
+          #stef
+
+        #logo
+          %h1
+            %img{:src => "images/bastardi-logo.png", :alt => "Film Bastardi", :title => "Film Bastardi"}
+
+    %a#audio{:href => "bastardi_trailer_hudba.mp3"}

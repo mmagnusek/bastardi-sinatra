@@ -1,0 +1,26 @@
+@import "reset.css";
+
+body{
+  background-color: black;
+  font-family: Helvetica,Arial, sans-serif;
+  height: 100%;
+}
+#video{
+  margin: auto;
+  width: 640px;
+  text-align: center;
+}
+#player{
+  margin-bottom: 20px;
+  display: block;
+  width: 640px;
+  height: 360px;
+}
+#skip_intro{
+  text-transform: uppercase;
+  font-size: 24px;
+  text-decoration: none;
+  color: red;
+  text-shadow: white 1px 2px 2px;
+  font-weight: bolder;
+}

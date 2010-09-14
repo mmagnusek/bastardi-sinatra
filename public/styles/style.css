@@ -1,0 +1,252 @@
+@import "reset.css";
+
+body {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  font-family: Helvetica,Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.center{
+  text-align: center;
+}
+#content {
+  width: 1200px;
+  margin: 0px auto;
+  height: 709px;
+}
+#content-filter{
+  width: 100%;
+  height: 709px;
+  background-image: url("../images/background-filter.png");
+  overflow: hidden;
+}
+#logo{
+  margin-top: 5px;
+  margin-left: 150px;
+  width: 380px;
+  height: 105px;
+}
+.slideshow{
+  z-index: -1;
+  position: absolute;
+}
+.actorPhoto{
+  width: 1200px;
+  height: 675px;
+  z-index: -1;
+  position: absolute;
+}
+#content-box{
+  margin: 50px auto 0 auto;
+  width: 1000px;
+  height: 450px;
+}
+#content-background{
+  background-image: url("../images/content-text-background.png");
+  width: 960px;
+  height: 410px;
+  padding: 20px;
+}
+#close_button{
+  position: absolute;
+  margin: -21px 0 0 958px;
+}
+#content-text{
+  line-height:150%;
+  overflow: auto;
+  height:410px;
+  text-align: justify;
+  padding-right: 15px;
+}
+#content-text img.image{
+  margin: 5px;
+}
+#content-text .image{
+  width: 50%;
+  float: left;
+}
+#content-text .image .o_filmu{
+  background-image: url('../o_filmu/background.png');
+  margin: 0px auto;
+  width: 290px;
+  height: 200px;
+}
+#content-text .image .o_filmu img{
+  margin-top: 2px;
+  margin-left: 2px;
+}
+#menu{
+  text-align: center;
+  font-size: 26px;
+  margin-top: 43px;
+}
+
+.lavaLamp {
+    margin-left: 120px;
+    height: 29px;
+    overflow: hidden;
+}
+/* Force the list to flow horizontally */
+.lavaLamp li {
+    float: left;
+    list-style: none;
+}
+/* Represents the background of the highlighted menu-item. */
+.lavaLamp li.back {
+    background: url("../images/lava.png") no-repeat right -30px;
+    width: 9px; height: 30px;
+    z-index: 8;
+    position: absolute;
+}
+.lavaLamp li.back .left {
+    background: url("../images/lava.png") no-repeat top left;
+    height: 30px;
+    margin-right: 9px;
+}
+/* Styles for each menu-item. */
+.lavaLamp li a {
+    position: relative; overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    font: bold 14px arial;
+    color: #fff; outline: none;
+    text-align: center;
+    height: 30px; top: 7px;
+    z-index: 10; letter-spacing: 0;
+    float: left; display: block;
+    margin: auto 10px;
+}
+
+#audio{
+  display: block;
+  width: 0px;
+  height: 0px;
+}
+      
+.tvurci {
+  width: 100%;
+  clear: both;
+}
+h1,h2,
+table thead td{
+  color: red;
+  text-shadow: black 1px 2px 2px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.tvurci .image_background{
+  background-image: url('../tvurci/background.png');
+  width: 170px;
+  height: 115px;
+  float: left;
+}
+.tvurci img{
+  margin: 5px 0 0 5px;
+}
+#music{
+  position: absolute;
+  margin: -30px 0 0 900px;
+  width: 49px;
+}
+#trailer{
+  position: absolute;
+  margin: -35px 0 0 980px;
+}
+#trailer a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font: bold 14px arial;
+  color: #fff; outline: none;
+}
+#trailer a:hover{
+  color: red;
+}
+#stef{
+  position: absolute;
+  margin: -27px 0 0 1070px;
+  width: 49px;
+  height: 21px;
+  background-image: url('../images/mini_stef.png');
+}
+#play_button{
+  width: 25px;
+  height: 25px;
+  background-image: url('../images/play_button.png');
+  display: block;
+  float: left;
+}
+#stop_button{
+  width: 24px;
+  height: 25px;
+  background-image: url('../images/stop_button.png');
+  display: block;
+  float: left;
+}
+#image_gallery .photo{
+  background-image: url('../z_nataceni/background.png');
+  float: left;
+  width: 225px;
+  height: 155px;
+  margin-right: 5px;
+}
+#image_gallery .photo img{
+  margin-top: 2px;
+  margin-left: 2px;
+}
+#actorList{
+  background-image: url('../herci/actorList-background.png');
+  float: right;
+  padding-left: 10px;
+  width: 180px;
+  height: 410px;
+  overflow: hidden;
+}
+#actorList li{
+  font-size: 14px;
+  height: 18px;
+}
+#actorList li a{
+  color: white;
+}
+#actorList li a.hover{
+  color: red;
+}
+#actorList li a.active{
+  color: red;
+}
+#actorDetail{
+  width: 730px;
+  height: 100%;
+}
+a.partner{
+ margin: 0px 2px; 
+}
+a.partner #diakonie{
+  margin: -10px 0px -15px 0px;
+}
+a.partner #mary_kay{
+  margin-top: 5px;
+}
+h2.partner_section{
+  clear: both;
+  position: absolute;
+}
+#spot-container{
+  text-align: center;
+}
+#spot-preview{
+  height: 300px;
+  width: 100%;
+}
+#spoty{
+  position: relative;
+  width: 950px;
+}
+#spoty img{
+  position: absolute;
+  margin-top: 15px;
+  width: 95px;
+}

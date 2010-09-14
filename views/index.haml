@@ -1,0 +1,16 @@
+!!! Strict
+%html{:xmlns =>"http://www.w3.org/1999/xhtml", :"xml:lang" => "cs", :lang => "cs"}
+  %head
+    %title= title
+    %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=UTF-8"}
+    %meta{:name => "description", :content => description }
+    %meta{:content => "Martin Magnusek", :name => "author"}
+    %link{:href => "styles/intro.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
+    %meta{:content => "bE0_IsKyJOj19-c8rkwOjnyt_iyrSeijHJOvmc7IKN0", :name => "google-site-verification"}
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", :type => "text/javascript"}
+    %script{:src => "javascripts/flowplayer-3.2.3.min.js", :type => "text/javascript"}
+    %script{:src => "javascripts/intro.js", :type => "text/javascript"}
+  %body
+    #video
+      %a#player{:href => "trailer.mp4"}
+      %a#skip_intro{:href => "o_filmu.html"} Přeskočit
