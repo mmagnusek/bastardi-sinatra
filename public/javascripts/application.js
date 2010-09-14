@@ -41,7 +41,7 @@ $(document).ready(function() {
   $("#herci_link").attr('href',"#herci");
   $("#z_nataceni_link").attr('href',"#z_nataceni");
   $("#tvurci_link").attr('href',"#tvurci");
-  $("#sponzori_link").attr('href',"#sponzori");
+  $("#partneri_link").attr('href',"#partneri");
   $("#spoty_link").attr('href',"#spoty");
   $("#aktuality_link").attr('href',"#aktuality");
 
@@ -101,8 +101,8 @@ function changePageTitle(page_name){
     case 'tvurci':
       document.title = "Bastardi - Tvůrci českého filmu";
       break;
-    case 'sponzori':
-      document.title = "Bastardi - Naši sponzoři";
+    case 'partneri':
+      document.title = "Bastardi - Naši partneři";
       break;
     case 'spoty':
       document.title = "Bastardi - Krátká videa s herci";

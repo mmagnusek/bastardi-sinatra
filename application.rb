@@ -47,10 +47,10 @@ get '/herci.html' do
   haml :herci, :layout => @layout
 end
 
-get '/sponzori.html' do
-  @title = "Bastardi - Naši sponzoři"
-  @description = "Děkujeme všem sponzorům. Mezi nimi patrí STEF recycling, Batist, Bronas, CDS, Tyros Loading Systems, Hašpl, Mary Kay, Nail tek, Kadeřnictví Butik U bílé vrány, Primátor, Potraviny Verner, Stavis a další."
-  haml :sponzori, :layout => @layout
+get '/partneri.html' do
+  @title = "Bastardi - Naši partneři"
+  @description = "Děkujeme všem partnerům. Mezi nimi patří STEF recycling, Batist, Bronas, CDS, Tyros Loading Systems, Hašpl, Mary Kay, Nail tek, Kadeřnictví Butik U bílé vrány, Primátor, Potraviny Verner, Stavis a další."
+  haml :partneri, :layout => @layout
 end
 
 get '/spoty.html' do
