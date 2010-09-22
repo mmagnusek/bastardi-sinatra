@@ -44,6 +44,7 @@ $(document).ready(function() {
   $("#partneri_link").attr('href',"#partneri");
   $("#spoty_link").attr('href',"#spoty");
   $("#aktuality_link").attr('href',"#aktuality");
+  $("#soutez_link").attr('href',"#soutez");
 
 });
 
@@ -69,7 +70,7 @@ function checkAnchor(){
 		  query = currentAnchor.substring(1);
 
       $.ajax({
-        url: query + '.html',
+        url: '/' + query + '.html',
         success: function(data) {
           changePageTitle(query);
           $(this).parent().addClass('back');
@@ -106,6 +107,9 @@ function changePageTitle(page_name){
       break;
     case 'spoty':
       document.title = "Bastardi - Krátká videa s herci";
+      break;
+    case 'soutez':
+      document.title = "Bastardi - Hrajte o lístky na premiéru filmu";
       break;
     case 'facebook':
       document.title = "Bastardi - Přidejte se mezi fanoušky stránky na facebooku";

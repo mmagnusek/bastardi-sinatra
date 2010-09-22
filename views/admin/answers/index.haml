@@ -1,0 +1,15 @@
+- title "Administrace - Seznam odpovědí"
+%table
+  - if @answers && @answers.size > 0
+    - @answers.each do |answer|
+      %tr
+        %td= answer.email
+        %td= answer.created_at
+        %td
+          %a{:href => "/admin/answers/#{answer.id}", :class => "show"} Zobrazit
+          %form{:action => "/admin/answers/#{answer.id}", :method => "post"}
+            %input{:type => "hidden", :name => "_method", :value => "delete"}
+            %input{:type => "submit", :value => "Smazat"}
+  - else
+    %tr
+      %td{:colspan => "3"} Žádný záznam nenalezen

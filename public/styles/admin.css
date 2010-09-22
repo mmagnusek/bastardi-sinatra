@@ -1,0 +1,26 @@
+@import "reset.css";
+
+body {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  font-family: Helvetica,Arial, sans-serif;
+}
+#logo{
+  width: 380px;
+  height: 105px;
+  margin: 0px auto;
+  background-image: url('/images/bastardi-logo.png');
+}
+
+#content{
+  margin: 0px auto;
+  width: 800px;
+}
+#content table{
+  width: 100%;
+}
+
+.show{
+  float: left;
+}

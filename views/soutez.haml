@@ -1,0 +1,19 @@
+- title
+- description
+%h2 Soutěžte s námi o lístky na premiéru filmu Bastardi
+%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel enim massa, vel malesuada est. Donec et vehicula urna. Ut laoreet, massa ut vehicula pellentesque, velit nunc ultricies dolor, vel elementum risus metus sed odio. Fusce neque tortor, fringilla at laoreet eget, ultrices ut nisl. Integer feugiat, nisl vel vestibulum ultricies, ligula lorem sagittis sapien, sed ullamcorper tellus massa vitae purus. Ut vitae ipsum egestas dolor consequat rutrum. Maecenas mollis mi id sapien accumsan consectetur.
+- if @answer.errors.any?
+  #errorExplanation
+  %ul
+  - @answer.errors.full_messages.each do |msg|
+    %li= msg
+%form{:action => '/soutez/new', :method => 'post', :name => 'soutez', :id => 'soutez_form' }
+  %input{:type => 'hidden', :name => '_method', :value => 'put'}
+  %label{:for => 'answer[email]'} Email
+  %input{:type => 'text', :name => 'answer[email]', :id => 'answer_email', :value => @answer.email}
+  %br
+  %label{:for => 'answer[message]'} Zpráva
+  %textarea{:name => 'answer[message]', :rows => '9', :cols => '90' }= @answer.message
+  %br
+  %label &nbsp;
+  %input{:type => 'submit', :id => 'submit'}

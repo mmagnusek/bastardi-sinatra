@@ -111,10 +111,11 @@ a {
     position: relative; overflow: hidden;
     text-decoration: none;
     text-transform: uppercase;
-    font: bold 14px arial;
+    font-size: 16px;
+    font-family: 'Antigoni',Arial, sans-serif;
     color: #fff; outline: none;
     text-align: center;
-    height: 30px; top: 7px;
+    height: 30px; top: 4px;
     z-index: 10; letter-spacing: 0;
     float: left; display: block;
     margin: auto 10px;
@@ -249,4 +250,24 @@ h2.partner_section{
   position: absolute;
   margin-top: 15px;
   width: 95px;
+}
+#soutez_form{
+  
+}
+#soutez_form label{
+  display: block;
+  width: 100px;
+  float: left;
+  text-align: right;
+  margin-right: 10px;
+}
+#soutez_form input,
+#soutez_form textarea{
+  font-size: 14px;
+}
+#soutez_form input#answer_email{
+  width: 190px;
+}
+#soutez_form input#submit{
+  width: 100px;
 }

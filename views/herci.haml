@@ -1,3 +1,5 @@
+- title "Bastardi - Film, ve kterém hraje mnoho známých herců"
+- description "Přijďte se podívat na známé tváře. Ve filmu hrají Ladislav Potměšil, Kristýna Leichtová, Alexand Hemala, Saša Rašilov, Tomáš Magnusek, Jan Přeučil a další."
 :javascript
   $(document).ready(function() {
     $("#actorList li a").hover(function(){
@@ -21,7 +23,7 @@
   }
   function showActor(jmeno){
     $("#actorDetail tr td").html($("#" + jmeno).html());
-    $(".actorPhoto").css("background-image", "url('herci/" + jmeno + ".JPG')");
+    $(".actorPhoto").css("background-image", "url('/herci/" + jmeno + ".JPG')");
     $(".actorPhoto").fadeIn(100);
   }
 

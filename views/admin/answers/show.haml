@@ -1,0 +1,8 @@
+%h1 Detail odpovědi:
+%p= @answer.message
+%h2 Email:
+%p= @answer.email
+%form{:action => "/admin/answers/#{@answer.id}/update_points", :method => "post"}
+  %input{:type => "hidden", :name => "_method", :value => "put"}
+  %input{:type => "text", :name => "points", :value => @answer.points}
+  %input{:type => "submit", :value => "Uložit hodnocení"}
