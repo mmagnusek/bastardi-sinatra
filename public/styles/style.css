@@ -12,6 +12,9 @@ a {
 .center{
   text-align: center;
 }
+.smaller{
+  font-size: 80%;
+}
 #content {
   width: 1200px;
   margin: 0px auto;
@@ -270,4 +273,9 @@ h2.partner_section{
 }
 #soutez_form input#submit{
   width: 100px;
+}
+ul.winners{
+  margin: 20px 0px;
+  text-shadow: black 1px 2px 2px;
+  font-weight: bolder;
 }

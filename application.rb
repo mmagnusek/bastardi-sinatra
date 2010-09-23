@@ -58,8 +58,8 @@ get '/spoty.html' do
 end
 
 get '/soutez.html' do
-  @answer = Answer.new
-  haml :soutez, :layout => @layout
+  # @answer = Answer.new
+  haml :soutez_vysledky, :layout => @layout
 end
 
 get '/tvurci.html' do
