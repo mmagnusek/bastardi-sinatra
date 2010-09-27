@@ -8,12 +8,25 @@ body {
 }
 a {
   text-decoration: none;
+  color: #d94a4c;
 }
 .center{
   text-align: center;
 }
 .smaller{
   font-size: 80%;
+}
+.small{
+  font-size: 90%;
+}
+.flash{
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  width: 1200px;
+}
+.error{
+  color: red;
 }
 #content {
   width: 1200px;
@@ -255,21 +268,18 @@ h2.partner_section{
   width: 95px;
 }
 #soutez_form{
-  
+  margin: 10px 0px;
+  font-size: 75%;
 }
-#soutez_form label{
-  display: block;
-  width: 100px;
+#soutez_form #credentials label{
+  width: 130px;
   float: left;
-  text-align: right;
-  margin-right: 10px;
 }
-#soutez_form input,
-#soutez_form textarea{
-  font-size: 14px;
-}
-#soutez_form input#answer_email{
+#soutez_form #credentials input{
   width: 190px;
+}
+#soutez_form #answer_dictrict_id{
+  margin-left: 130px;
 }
 #soutez_form input#submit{
   width: 100px;

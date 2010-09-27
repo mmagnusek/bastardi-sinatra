@@ -45,6 +45,8 @@ $(document).ready(function() {
   $("#spoty_link").attr('href',"#spoty");
   $("#aktuality_link").attr('href',"#aktuality");
   $("#soutez_link").attr('href',"#soutez");
+  
+  $(".flash").fadeOut(3000)
 
 });
 

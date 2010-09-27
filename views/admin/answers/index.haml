@@ -4,6 +4,7 @@
     - @answers.each do |answer|
       %tr
         %td= answer.email
+        %td= answer.district.name if answer.district
         %td= answer.created_at
         %td
           %a{:href => "/admin/answers/#{answer.id}", :class => "show"} Zobrazit

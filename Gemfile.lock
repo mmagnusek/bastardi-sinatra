@@ -16,14 +16,16 @@ GEM
     builder (2.1.2)
     haml (3.0.18)
     i18n (0.4.1)
-    mysql (2.8.1)
     rack (1.2.1)
+    rack-flash (0.1.1)
+      rack
     sinatra (1.0)
       rack (>= 1.0)
     sinatra-activerecord (0.1.2)
       sinatra (>= 0.9.4)
     sinatra-content-for (0.2)
       sinatra
+    sqlite3-ruby (1.3.1)
     tzinfo (0.3.23)
 
 PLATFORMS
@@ -33,8 +35,9 @@ DEPENDENCIES
   activerecord
   arel
   haml
-  mysql
   rack (~> 1.2.1)
+  rack-flash
   sinatra
   sinatra-activerecord
   sinatra-content-for
+  sqlite3-ruby

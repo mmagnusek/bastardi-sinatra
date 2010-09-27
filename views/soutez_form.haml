@@ -1,19 +1,72 @@
 - title
 - description
-%h2 Soutěžte s námi o lístky na premiéru filmu Bastardi
-%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel enim massa, vel malesuada est. Donec et vehicula urna. Ut laoreet, massa ut vehicula pellentesque, velit nunc ultricies dolor, vel elementum risus metus sed odio. Fusce neque tortor, fringilla at laoreet eget, ultrices ut nisl. Integer feugiat, nisl vel vestibulum ultricies, ligula lorem sagittis sapien, sed ullamcorper tellus massa vitae purus. Ut vitae ipsum egestas dolor consequat rutrum. Maecenas mollis mi id sapien accumsan consectetur.
-- if @answer.errors.any?
-  #errorExplanation
-  %ul
-  - @answer.errors.full_messages.each do |msg|
-    %li= msg
+:javascript
+  $(document).ready(function() {
+    $("#aktuality_link").attr('href',"#aktuality");
+    $("#soutez_vysledky_link").attr('href',"#soutez_vysledky");
+  });
+
+%h2 Velká  soutěž o 350 lístků do vašeho kina
+%p.small Soutěžte s filmem Bastardi o volný lístek do kina ve vašem okrese. Stačí správně odpovědět na tři soutěžní otázky a vybrat okres, ve kterém chcete jít do kina. V každém okrese bude vylosováno pět výherců, který obdrží volný lístek do kina.  Uzavírka odpovědí je 4.10.2010 ve 23:59. Pro více informací čtěte <a href="/pravidla.pdf">přesná pravidla soutěže.</a>
+
 %form{:action => '/soutez/new', :method => 'post', :name => 'soutez', :id => 'soutez_form' }
-  %input{:type => 'hidden', :name => '_method', :value => 'put'}
-  %label{:for => 'answer[email]'} Email
-  %input{:type => 'text', :name => 'answer[email]', :id => 'answer_email', :value => @answer.email}
+  #credentials
+    %input{:type => 'hidden', :name => '_method', :value => 'put'}
+    %label{:for => 'answer_name'} Jméno a příjmení
+    %input{:type => 'text', :name => 'answer[name]', :id => 'answer_name', :value => @answer.name}
+    - if @answer.errors.on(:name)
+      %span.error Špatně vypleněné jméno
+    %br
+    %label{:for => 'answer_email'} Email
+    %input{:type => 'text', :name => 'answer[email]', :id => 'answer_email', :value => @answer.email}
+    - if @answer.errors.on(:email)
+      %span.error Špatně vypleněný email
+  %label{:for => 'answer_district_id'} Vyberte okres ve kterém se chcete soutěžit ( Každý se může přihlásit jen do jednoho okresu ).
   %br
-  %label{:for => 'answer[message]'} Zpráva
-  %textarea{:name => 'answer[message]', :rows => '9', :cols => '90' }= @answer.message
+  %select{:name => 'answer[district_id]', :id => 'answer_dictrict_id'}
+    - @districts.each do |district|
+      %option{:value => district.id }= district.name
   %br
+  %h3 Soutěžní otázky
+  .question
+    %h4 1. Jak se jmenuje slavná herečka, známá například z filmu s tebou mě baví svět, jež ve filmu hraje učitelku, kterou žáci nejvíce deptají.
+    %ul{:class => "#{'error' if @answer.errors.on(:question1)}"}
+      %li
+        %input{:type => 'radio', :id => 'answer_question1a', :name => 'answer[question1]', :value => 'a', :checked => checked?('a', @answer.question1)}
+        %label{:for => 'answer_question1a'} a) Eva Čížkovská
+      %li
+        %input{:type => 'radio', :id => 'answer_question1b', :name => 'answer[question1]', :value => 'b', :checked => checked?('b',@answer.question1)}
+        %label{:for => 'answer_question1b'} b) Jana Šulcová
+      %li
+        %input{:type => 'radio', :id => 'answer_question1c', :name => 'answer[question1]', :value => 'c', :checked => checked?('c',@answer.question1)}
+        %label{:for => 'answer_question1c'} c) Blanka Bohdanová
+  .question
+    %h4 2. Která z hereček z filmu Bastardi oslavila letos 80. narozeniny?
+    %ul{:class => "#{'error' if @answer.errors.on(:question2)}"}
+      %li
+        %input{:type => 'radio', :id => 'answer_question2a', :name => 'answer[question2]', :value => 'a', :checked => checked?('a',@answer.question2)}
+        %label{:for => 'answer_question2a'} a) Blanka Bohdanová
+      %li
+        %input{:type => 'radio', :id => 'answer_question2b', :name => 'answer[question2]', :value => 'b', :checked => checked?('b',@answer.question2)}
+        %label{:for => 'answer_question2b'} b) Valentina Thielová
+      %li
+        %input{:type => 'radio', :id => 'answer_question2c', :name => 'answer[question2]', :value => 'c', :checked => checked?('c',@answer.question2)}
+        %label{:for => 'answer_question2c'} c) Jaroslava Hanušová
+  .question
+    %h4 3. Ve filmu Bastardi zazní  i skladby známého slovenského rapera. O koho jde?
+    %ul{:class => "#{'error' if @answer.errors.on(:question3)}"}
+      %li
+        %input{:type => 'radio', :id => 'answer_question3a', :name => 'answer[question3]', :value => 'a', :checked => checked?('a',@answer.question3)}
+        %label{:for => 'answer_question3a'} a) Orion
+      %li
+        %input{:type => 'radio', :id => 'answer_question3b', :name => 'answer[question3]', :value => 'b', :checked => checked?('b',@answer.question3)}
+        %label{:for => 'answer_question3b'} b) Witch
+      %li
+        %input{:type => 'radio', :id => 'answer_question3c', :name => 'answer[question3]', :value => 'c', :checked => checked?('c',@answer.question3)}
+        %label{:for => 'answer_question3c'} c) Rytmus
   %label &nbsp;
-  %input{:type => 'submit', :id => 'submit'}
+  %input{:type => 'submit', :id => 'submit', :value => 'Hlasovat'}
+  
+%a.smaller{:id => 'soutez_vysledky_link', :href => '/soutez_vysledky.html'} Výsledky rychlé facebook soutěže ze 22.9.
+%br
+%a.smaller{:id => 'aktuality_link', :href => '/aktuality.html'} Sledujte aktuality, soutěže a zákulisní informace filmu Bastardi na facebook
