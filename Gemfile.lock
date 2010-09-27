@@ -25,7 +25,7 @@ GEM
       sinatra (>= 0.9.4)
     sinatra-content-for (0.2)
       sinatra
-    sqlite3-ruby (1.3.1)
+    sqlite3-ruby (1.2.5)
     tzinfo (0.3.23)
 
 PLATFORMS
@@ -40,4 +40,4 @@ DEPENDENCIES
   sinatra
   sinatra-activerecord
   sinatra-content-for
-  sqlite3-ruby
+  sqlite3-ruby (= 1.2.5)
