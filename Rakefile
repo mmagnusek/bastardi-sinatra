@@ -3,7 +3,7 @@ namespace :db do
     require 'active_record'
     ActiveRecord::Base.establish_connection(
       :adapter => 'sqlite3',
-      :database =>  'bastardi.sqlite3.db'
+      :database =>  'production.db'
     )
   end
   
