@@ -2,7 +2,7 @@
 
 ActiveRecord::Base.establish_connection(
   :adapter => 'sqlite3',
-  :database =>  'bastardi.sqlite3.db'
+  :database =>  'production.db'
 )
 
 class Answer < ActiveRecord::Base

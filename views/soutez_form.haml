@@ -14,12 +14,12 @@
     %input{:type => 'hidden', :name => '_method', :value => 'put'}
     %label{:for => 'answer_name'} Jméno a příjmení
     %input{:type => 'text', :name => 'answer[name]', :id => 'answer_name', :value => @answer.name}
-    - if @answer.errors.on(:name)
+    - if @answer.errors.has_key?(:name)
       %span.error Špatně vypleněné jméno
     %br
     %label{:for => 'answer_email'} Email
     %input{:type => 'text', :name => 'answer[email]', :id => 'answer_email', :value => @answer.email}
-    - if @answer.errors.on(:email)
+    - if @answer.errors.has_key?(:email)
       %span.error Špatně vypleněný email
   %label{:for => 'answer_district_id'} Vyberte okres ve kterém se chcete soutěžit ( Každý se může přihlásit jen do jednoho okresu ).
   %br
@@ -30,7 +30,7 @@
   %h3 Soutěžní otázky
   .question
     %h4 1. Jak se jmenuje slavná herečka, známá například z filmu s tebou mě baví svět, jež ve filmu hraje učitelku, kterou žáci nejvíce deptají.
-    %ul{:class => "#{'error' if @answer.errors.on(:question1)}"}
+    %ul{:class => "#{'error' if @answer.errors.has_key?(:question1)}"}
       %li
         %input{:type => 'radio', :id => 'answer_question1a', :name => 'answer[question1]', :value => 'a', :checked => checked?('a', @answer.question1)}
         %label{:for => 'answer_question1a'} a) Eva Čížkovská
@@ -42,7 +42,7 @@
         %label{:for => 'answer_question1c'} c) Blanka Bohdanová
   .question
     %h4 2. Která z hereček z filmu Bastardi oslavila letos 80. narozeniny?
-    %ul{:class => "#{'error' if @answer.errors.on(:question2)}"}
+    %ul{:class => "#{'error' if @answer.errors.has_key?(:question2)}"}
       %li
         %input{:type => 'radio', :id => 'answer_question2a', :name => 'answer[question2]', :value => 'a', :checked => checked?('a',@answer.question2)}
         %label{:for => 'answer_question2a'} a) Blanka Bohdanová
@@ -54,7 +54,7 @@
         %label{:for => 'answer_question2c'} c) Jaroslava Hanušová
   .question
     %h4 3. Ve filmu Bastardi zazní  i skladby známého slovenského rapera. O koho jde?
-    %ul{:class => "#{'error' if @answer.errors.on(:question3)}"}
+    %ul{:class => "#{'error' if @answer.errors.has_key?(:question3)}"}
       %li
         %input{:type => 'radio', :id => 'answer_question3a', :name => 'answer[question3]', :value => 'a', :checked => checked?('a',@answer.question3)}
         %label{:for => 'answer_question3a'} a) Orion
