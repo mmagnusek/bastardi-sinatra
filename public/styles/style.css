@@ -127,8 +127,8 @@ a {
     position: relative; overflow: hidden;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
-    font-family: 'Antigoni',Arial, sans-serif;
+    font-size: 18px;
+    font-family: 'Antigoni Med',Arial, sans-serif;
     color: #fff; outline: none;
     text-align: center;
     height: 30px; top: 4px;
@@ -152,7 +152,6 @@ table thead td{
   color: red;
   text-shadow: black 1px 2px 2px;
   font-size: 24px;
-  font-weight: bolder;
 }
 .tvurci .image_background{
   background-image: url('../tvurci/background.png');
