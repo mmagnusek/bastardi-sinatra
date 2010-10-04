@@ -67,7 +67,7 @@ get '/spoty.html' do
   haml :spoty, :layout => @layout
 end
 
-get '/soutez_vysledky.html' do
+get '/soutez.html' do
   haml :soutez_vysledky, :layout => @layout
 end
 
@@ -80,4 +80,4 @@ get '/z_nataceni.html' do
 end
 
 
-load 'souteze.rb'
+# load 'souteze.rb'
