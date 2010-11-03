@@ -44,7 +44,7 @@ $(document).ready(function() {
   $("#partneri_link").attr('href',"#partneri");
   $("#spoty_link").attr('href',"#spoty");
   $("#aktuality_link").attr('href',"#aktuality");
-  $("#soutez_link").attr('href',"#soutez");
+  $("#nasazeni_link").attr('href',"#nasazeni");
   
   $(".flash").fadeOut(3000);
 });

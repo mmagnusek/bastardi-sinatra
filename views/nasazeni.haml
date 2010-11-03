@@ -1,0 +1,32 @@
+- title "Bastardi - Nasazeni filmu v kinech"
+- description ""
+:javascript
+  $(document).ready(function() {
+    _typeface_js.renderDocument();
+    $("#cinema_select").change(function(){
+      var current_cinema = $(this).val();
+      $.ajax({
+        url: '/get_dates?cinema=' + current_cinema,
+        success: function(data) {
+          $("#dates").html(data);
+        }
+      });
+    });
+  });
+.projections
+  %h2= "Nasazení filmu dnes: #{Date.today}"
+  %ul
+    - @today_projections.each do |projection|
+      %li= projection.location
+    
+.projections
+  %h2= "Nasazeni filmu zítra: #{Date.today + 1.day}"
+  %ul.projections
+    - @tomorrow_projections.each do |projection|
+      %li= projection.location
+      
+%h2 Vyberte kino
+%select{:id => "cinema_select"}
+  - @cinemas.each do |cinema|
+    %option{:value => cinema }= cinema
+#dates

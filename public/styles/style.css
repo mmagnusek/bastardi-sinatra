@@ -288,3 +288,14 @@ ul.winners{
   text-shadow: black 1px 2px 2px;
   font-weight: bolder;
 }
+.projections{
+  width: 49%;
+  float: left;
+  line-height: 110%;
+}
+.projections ul{
+  margin-top: 10px;
+}
+.projections ul li{
+  font-size: 14px;
+}
