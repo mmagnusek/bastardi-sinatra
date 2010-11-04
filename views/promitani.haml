@@ -1,4 +1,4 @@
-- title "Bastardi - Nasazeni filmu v kinech"
+- title "Bastardi - Kina kde promítáme"
 - description ""
 :javascript
   $(document).ready(function() {
@@ -14,13 +14,13 @@
     });
   });
 .projections
-  %h2= "Nasazení filmu dnes: #{Date.today}"
+  %h2= "Promítání filmu dnes: #{Date.today}"
   %ul
     - @today_projections.each do |projection|
       %li= projection.location
     
 .projections
-  %h2= "Nasazeni filmu zítra: #{Date.today + 1.day}"
+  %h2= "Promítání filmu zítra: #{Date.today + 1.day}"
   %ul.projections
     - @tomorrow_projections.each do |projection|
       %li= projection.location

@@ -10,13 +10,13 @@ class Projection < ActiveRecord::Base
   scope :tomorrow,  lambda { { :conditions => ['date == ?', Date.today + 1.day] } }
 end
 
-get '/nasazeni.html' do
+get '/promitani.html' do
   @today_projections    = Projection.today
   @tomorrow_projections = Projection.tomorrow
   @cinemas = Projection.find(:all, :conditions => ["date >= :today", { :today => Date.today}]).map do |projection|
     projection.location
   end.sort.uniq
-  haml :nasazeni, :layout => @layout
+  haml :promitani, :layout => @layout
 end
 
 get '/get_dates' do
