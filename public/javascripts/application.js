@@ -44,7 +44,7 @@ $(document).ready(function() {
   $("#partneri_link").attr('href',"#partneri");
   $("#spoty_link").attr('href',"#spoty");
   $("#aktuality_link").attr('href',"#aktuality");
-  $("#promitani_link").attr('href',"#promitani");
+  $("#eshop_link").attr('href',"#eshop");
   
   $(".flash").fadeOut(3000);
 });
@@ -109,8 +109,8 @@ function changePageTitle(page_name){
     case 'spoty':
       document.title = "Bastardi - Krátká videa s herci";
       break;
-    case 'promitani':
-      document.title = "Bastardi - Kina kde promítáme";
+    case 'eshop':
+      document.title = "Bastardi - Předměty ke koupi";
       break;
     case 'facebook':
       document.title = "Bastardi - Přidejte se mezi fanoušky stránky na facebooku";

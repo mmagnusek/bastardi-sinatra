@@ -75,4 +75,6 @@ get '/z_nataceni.html' do
   haml :z_nataceni, :layout => @layout
 end
 
-load 'promitani.rb'
+get '/eshop.html' do
+  haml :eshop, :layout => @layout
+end
