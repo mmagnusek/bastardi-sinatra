@@ -4,6 +4,8 @@ body{
   text-align: center;
   width: 520px;
   margin: 0 auto;
+  background-color: black;
+  font-family: Helvetica,Arial, sans-serif;
 }
 a{
   padding-top: 10px;
