@@ -9,8 +9,14 @@ body{
 }
 a{
   padding-top: 10px;
-  font-size: 20px;
+  color: grey;
+}
+a:hover{
+  text-decoration: none;
 }
 #video{
   width: 100%;
+}
+p{
+  color: white;
 }
