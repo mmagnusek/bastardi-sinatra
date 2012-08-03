@@ -13,8 +13,8 @@
     %script{:src => "javascripts/intro.js", :type => "text/javascript"}
     %script{:src => "javascripts/application.js", :type => "text/javascript"}
   %body
-    %h1 Web Bastardi 3 bude spuštěn již za týden.
     #video
-      %a#player{:href => "trailer2.mp4"}
-      %a#skip_intro{:href => "o_filmu.html"} Bastardi
+      #player= erb :fb_video
+      %a#skip_intro{:href => "web.html"} Bastardi
       %a#skip_intro{:href => "http://www.bastardi2.cz/web.html", :style => { :'margin-left:' =>  '20px;'}} Bastardi2
+      %a#skip_intro{:href => "http://www.bastardi3.cz/web.html", :style => { :'margin-left:' =>  '20px;'}} Bastardi3
